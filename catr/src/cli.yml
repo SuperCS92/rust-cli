@@ -1,0 +1,25 @@
+name: catr
+version: "1.0"
+author: Carlos Segovia <carlos.segovia2011@gmail.com>
+about: Rust
+args: 
+    -files: 
+        short: f
+        long: input_files
+        value_name: FILE
+        multiple: true
+        help: Input files
+        
+    -number_lines:
+        short: n
+        help: Number the output lines, starting at 1.
+        takes_value: false
+        required: false
+        conflicts_with:
+            - number_nonblank
+    -number_nonblank:
+        short: b
+        long: number_nonblank
+        help:  Number the non-blank output lines, starting at 1.
+        takes_value: false
+        required: false

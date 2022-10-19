@@ -1,0 +1,30 @@
+name: myapp
+version: "1.0"
+author: Carlos S. <carlos.segovia2011@gmail.com>
+about: head build in rust
+args:
+      - bytes: 
+              short: c
+              long: bytes
+              help: Print count of bytes of each of the specified files
+              conflicts_with:
+                - chars
+      - lines: 
+              long: lines
+              short: l
+              help: Print count lines of each of the specified files
+      - words: 
+              long: words
+              short: w
+              help: Print count of words of each file
+      - chars: 
+              long: chars
+              short: m
+              help: Print count of chars of each file
+              conflicts_with:
+                - bytes
+      - files: 
+              value_name: FILE
+              help: Input file(s)
+              multiple: true
+              default_value: "-"

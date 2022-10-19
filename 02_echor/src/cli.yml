@@ -1,0 +1,29 @@
+name: echor
+version: "1.0"
+author: Carlos Segovia <carlos.segovia2011@gmail.com>
+about: Rust
+args: 
+    - text: 
+        value_name: TEXT
+        help: Input text
+        required: true
+        min_values: 1
+    - omit_newline:
+        short: n 
+        help: Do not print a newline
+        takes_value: false
+    - tms:
+        long: times
+        short: t
+        help: Print the input t times
+        takes_value: true
+        min_values: 1
+        required: false
+    - rndm:
+        long: random 
+        short: r
+        help: Print the characters composing the input in a pseudo-random order
+        takes_value: false
+        required: false
+        
+
